@@ -1,0 +1,126 @@
+:root {
+    --width: 860px;
+}
+
+body {
+    font: 16px/24px Roboto;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #FF8800, #FFaa00);
+    color: #ffffff;
+}
+
+.app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/assets/dot.svg);
+    background-size: 20px 20px;
+}
+
+a, a:active, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    max-width: var(--width);
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.promo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.brand {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.bear {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bear.white {
+    background-image: url(/assets/bear-white.svg);
+}
+
+.bear.black {
+    background-image: url(/assets/bear-black.svg);
+}
+
+.anchor {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.anchor + .anchor {
+    margin-left: 24px;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    padding-right: 32px;
+}
+
+.appstore {
+    height: 60px;
+    margin-top: 80px;
+    background-image: url(/assets/appstore-badge.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.device {
+    max-width: 325px;
+    margin-right: -5px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 56px;
+}
+
+.gap {
+    flex: 1;
+}
