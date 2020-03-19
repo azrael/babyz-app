@@ -73,14 +73,15 @@ nav {
 }
 
 .anchor {
+    margin-right: 24px;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.anchor + .anchor {
-    margin-left: 24px;
+.anchor:last-child {
+    margin-right: 0;
 }
 
 .title {
@@ -94,6 +95,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 40px 0;
 }
 
 .info {
@@ -101,6 +103,8 @@ nav {
 }
 
 .appstore {
+    display: inline-block;
+    width: 180px;
     height: 60px;
     margin-top: 80px;
     background-image: url(appstore-badge.svg);
@@ -123,4 +127,34 @@ footer {
 
 .gap {
     flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .info {
+        max-width: 80vw;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .appstore {
+        margin: 40px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 24px;
+    }
+
+    .anchor {
+        margin: 8px 0 0 0;
+    }
 }
