@@ -18,17 +18,33 @@
             <a href="#" class="brand">MommyDiary</a>
         </nav>
 
-        <div class="main">
-            <div class="info">
-                <div class="title">
-                    With MommyDiary, you can easily track your baby's sleep and&nbsp;feeding!
+        <div class="wrapper">
+            <div class="main">
+                <div class="info">
+                    <div class="os-selector">
+                        <a href="?os=ios" class="os-label ios"> iOS</a>
+                        <a href="?os=android" class="os-label android">ANDROID</a>
+                    </div>
+
+                    <div class="title">
+                        With MommyDiary, you can easily track your baby's sleep and&nbsp;feeding!
+                    </div>
+
+                    <div class="badges">
+                        <a href="https://apps.apple.com/ru/app/mommydiary/id1498978104" target="_blank" rel='noreferrer noopener' class="badge">
+                            <img src="assets/appstore-badge.svg">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.mommydiary" target="_blank" rel='noreferrer noopener' class="badge">
+                            <img src="assets/google-play-badge.svg">
+                        </a>
+                    </div>
                 </div>
 
-                <a href="https://apps.apple.com/ru/app/mommydiary/id1498978104" target="_blank" rel='noreferrer noopener' class="appstore"></a>
-            </div>
-
-            <div>
-                <img src="assets/mockup-iphone.png" class="device">
+                <div class="mockup">
+                    <img src="assets/mockup-iphone.png" class="device" data-os="ios">
+                    <img src="assets/mockup-watch.png" class="watch" data-os="ios">
+                    <img src="assets/mockup-android.png" class="device" data-os="android">
+                </div>
             </div>
         </div>
 
@@ -40,5 +56,6 @@
         </footer>
     </div>
 </div>
+<script src="assets/index.js"></script>
 </body>
 </html>

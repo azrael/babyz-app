@@ -8,6 +8,7 @@ body {
 
 .app {
     display: flex;
+    position: relative;
     min-height: 100vh;
     background-image: linear-gradient(45deg, #FF8800, #FFaa00);
     color: #ffffff;
@@ -24,9 +25,14 @@ body {
     background-size: 20px 20px;
 }
 
-a, a:active, a:visited {
+a:link, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: none;
+}
+
+.text a:link, .text a:visited, .text a:hover, .text a:active {
+    color: #3942ea;
+    text-decoration: underline;
 }
 
 .container {
@@ -78,10 +84,15 @@ nav {
     line-height: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .anchor:last-child {
     margin-right: 0;
+}
+
+.anchor.regular {
+    text-transform: initial;
 }
 
 .title {
@@ -90,11 +101,17 @@ nav {
     font-weight: 300;
 }
 
-.main {
+.wrapper {
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
     justify-content: space-between;
+    min-height: 674px;
     padding: 40px 0;
 }
 
@@ -102,14 +119,25 @@ nav {
     padding-right: 32px;
 }
 
-.appstore {
-    display: inline-block;
-    width: 180px;
-    height: 60px;
+.badges {
+    display: flex;
+    align-items: center;
     margin-top: 80px;
-    background-image: url(appstore-badge.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.badge + .badge {
+    margin-left: 12px;
+}
+
+.mockup {
+    position: relative;
+    text-align: center;
 }
 
 .device {
@@ -117,6 +145,12 @@ nav {
     margin-right: -5px;
 }
 
+.watch {
+    position: absolute;
+    width: 200px;
+    bottom: 30px;
+    left: -150px;
+}
 
 footer {
     display: flex;
@@ -129,13 +163,56 @@ footer {
     flex: 1;
 }
 
-@media screen and (max-width: 768px) {
+.app.ios [data-os=android] {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.app.android [data-os=ios] {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.os-selector {
+    margin-bottom: 40px;
+}
+
+.os-label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.os-label + .os-label {
+    margin-left: 24px;
+}
+
+.os-label.active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0 24px;
+    }
+
     nav {
         justify-content: center;
     }
 
     .main {
         flex-direction: column;
+        align-items: center;
     }
 
     .info {
@@ -144,8 +221,27 @@ footer {
         text-align: center;
     }
 
-    .appstore {
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .badges {
+        justify-content: center;
         margin: 40px 0;
+    }
+
+    .mockup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .watch {
+        position: static;
+        bottom: auto;
+        left: auto;
+        margin-top: 24px;
     }
 
     footer {
