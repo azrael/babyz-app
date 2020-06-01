@@ -1,1 +1,1 @@
-See https://azrael.github.io/mommy-diary-app/
+See https://azrael.github.io/babyz-app/

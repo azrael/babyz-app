@@ -1,7 +1,7 @@
 {
     "name": "mommy-diary-app",
     "version": "1.0.0",
-    "description": "Web site for MommyDiary app",
+    "description": "Web site for Babyz app",
     "scripts": {
         "dev": "node server"
     },
